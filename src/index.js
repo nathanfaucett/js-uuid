@@ -1,7 +1,5 @@
 var CHARS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".split(""),
-    UUID = new Array(36),
-    DASH = "-",
-    FOUR = "4";
+    UUID = new Array(36);
 
 
 module.exports = function uuid() {
@@ -9,9 +7,9 @@ module.exports = function uuid() {
 
     while (i++ < 36) {
         if (i === 8 || i === 13 || i === 18 || i === 23) {
-            UUID[i] = DASH;
+            UUID[i] = "-";
         } else if (i === 14) {
-            UUID[i] = FOUR;
+            UUID[i] = "4";
         } else {
             UUID[i] = CHARS[(Math.random() * 62) | 0];
         }
