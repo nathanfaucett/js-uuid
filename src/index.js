@@ -2,7 +2,10 @@ var CHARS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".spl
     UUID = new Array(36);
 
 
-module.exports = function uuid() {
+module.exports = uuid;
+
+
+function uuid() {
     var i = -1;
 
     while (i++ < 36) {
@@ -16,4 +19,4 @@ module.exports = function uuid() {
     }
 
     return UUID.join("");
-};
+}
